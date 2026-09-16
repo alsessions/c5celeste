@@ -1,7 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: c4ed2e4f-9765-4ecf-a0d9-8a1c8dc9f086 # Index2
 handle: index2
+maxAuthors: 1
+minAuthors: 1
 name: Index2
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon

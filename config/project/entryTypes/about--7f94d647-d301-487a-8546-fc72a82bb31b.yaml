@@ -12,6 +12,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -60,7 +61,9 @@ fieldLayouts:
 handle: about
 hasTitleField: true
 name: About
-section: b023c856-388e-49d5-b3c3-af0860a15198 # About
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

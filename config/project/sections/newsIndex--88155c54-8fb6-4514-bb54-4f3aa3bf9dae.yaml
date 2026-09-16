@@ -1,7 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 4e6389c3-4894-45bd-a376-30165826e3b5 # News Index
 handle: newsIndex
+maxAuthors: 1
+minAuthors: 1
 name: 'News Index'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon

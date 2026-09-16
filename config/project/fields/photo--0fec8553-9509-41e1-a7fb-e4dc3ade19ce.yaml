@@ -1,6 +1,5 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: d4401c02-0ab2-48b2-8f90-b3fba660540d # Gallery
 handle: photo
 instructions: null
 name: Photo
@@ -10,9 +9,11 @@ settings:
   allowSubfolders: false
   allowUploads: true
   allowedKinds: null
+  branchLimit: null
   defaultUploadLocationSource: 'volume:0a804e5e-1a24-497d-a7bf-9731f78112d8' # Gallery Item
   defaultUploadLocationSubpath: null
   localizeRelations: false
+  maintainHierarchy: false
   maxRelations: null
   minRelations: null
   previewMode: full
@@ -21,22 +22,10 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:0a804e5e-1a24-497d-a7bf-9731f78112d8' # Gallery Item
   restrictedLocationSubpath: null
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Asset
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\assets\AssetCondition
   selectionLabel: null
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  source: null
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false

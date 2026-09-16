@@ -1,7 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 3f17efca-0866-4cd0-86b8-44266b431997 # Gallery Index
 handle: gallery
+maxAuthors: 1
+minAuthors: 1
 name: 'Gallery Index'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon

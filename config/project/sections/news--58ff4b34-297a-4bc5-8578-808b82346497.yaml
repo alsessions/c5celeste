@@ -1,7 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 47aba095-5b23-4730-8fe9-c42639cbb8c6 # Default
 handle: news
+maxAuthors: 1
+minAuthors: 1
 name: News
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon

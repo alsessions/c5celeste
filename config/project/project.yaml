@@ -1,4 +1,4 @@
-dateModified: 1789514243
+dateModified: 1789524204
 elementSources:
   craft\elements\Entry:
     -
@@ -242,69 +242,45 @@ meta:
     1dadf828-8f91-43ae-afa5-d49f8fe7f5cb: 'Category Image' # Category Image
     3f17efca-0866-4cd0-86b8-44266b431997: 'Gallery Index' # Gallery Index
     4e6389c3-4894-45bd-a376-30165826e3b5: 'News Index' # News Index
-    6b0c7eb4-cf99-49b5-ae30-d9c6bff0f3d1: 'Optimized Images' # Optimized Images
     6cf9b141-6dd5-44b3-9788-59a8155cd854: Bio # Bio
     7cfcd554-f789-4144-a909-d1df4ba3ba6f: Price # Price
     7f94d647-d301-487a-8546-fc72a82bb31b: About # About
     8d772998-c88e-4484-aa9a-1e2691c8c3a9: 'Gallery Item' # Gallery Item
-    09a42df4-9b5b-47bf-8d1e-57fe2fea68a0: 'Public Schema' # Public Schema
-    9b09e355-8da4-4607-a6a9-cefedf852ff3: 'Public Schema' # Public Schema
     15ddaabb-0b3b-4e37-87f7-afd53a992ae5: 'Celeste Hanlon' # Celeste Hanlon
     028f0e28-62ee-4616-873e-a826084cea8e: 'Gallery Thumbnail' # Gallery Thumbnail
     47aba095-5b23-4730-8fe9-c42639cbb8c6: Default # Default
     58ff4b34-297a-4bc5-8578-808b82346497: News # News
-    83eb1363-c131-402c-a350-114f719f978d: Common # Common
     0727a1ba-2e97-401b-acf0-62404bd96183: 'Gallery Item' # Gallery Item
     861fbacf-15bb-444c-a03e-ffe4c9b625a8: Default # Default
     3988dbe6-9f79-448e-bad4-87e38fa9c092: 'Plain Text' # Plain Text
     8263b1df-8efc-4dbf-84b4-347808ba8d11: Assets # Assets
-    8279de5a-806c-46c6-9f9e-6978aa49fa3f: 'Public Schema' # Public Schema
     9661edd6-abcd-40f5-8297-18c412471129: 'Privacy  Policy' # Privacy  Policy
     45459bd9-67ba-4bc9-a2de-f44f827f1820: 'Privacy  Policy' # Privacy  Policy
     45897eaa-bc55-4a29-a6b4-dfbd59714945: Year # Year
     59589df6-ee58-471a-b688-418c40448ebb: 'Link Text' # Link Text
     64861cfc-b63e-44c1-94d3-89b36e800555: 'Contact Celeste' # Contact Celeste
     88155c54-8fb6-4514-bb54-4f3aa3bf9dae: 'News Index' # News Index
-    399753ed-5701-499c-adce-27b6c9e7e329: 'Public Schema' # Public Schema
     18072655-b712-4cc9-adec-60d41d875047: 'Gallery Index' # Gallery Index
     44083637-0c63-4f56-a344-9c83304136f4: 'Slider Image' # Slider Image
     68041276-7b3d-498b-9a92-f36db2dfe659: 'Celeste Hanlon' # Celeste Hanlon
     a5940ace-7123-46e0-9a70-cc841f70f3ff: 'Contact Celeste' # Contact Celeste
     af59a311-51e7-4dc9-9937-a4294b214ad1: 'Front Page' # Front Page
     b023c856-388e-49d5-b3c3-af0860a15198: About # About
-    b1bfef9e-b5d9-4697-a3b0-c699055ac415: Category # Category
     b9843c1c-1c9e-49e5-8a40-9592d9270aee: 'Banner Link' # Banner Link
     c2d83085-2e41-4597-8114-f21defb03ef2: '500 Wide' # 500 Wide
     c4ed2e4f-9765-4ecf-a0d9-8a1c8dc9f086: Index2 # Index2
-    c9ee7a04-e141-4e15-97a1-4021f547902f: 'Public Schema' # Public Schema
-    c154a5e8-8976-4775-88e3-d5bc32ed83b6: 'Public Schema' # Public Schema
-    cb6b6826-6262-4cd3-a1a9-3142974ff8a7: Simple # Simple
     d3cbd93b-73a8-4b2a-8fdf-0881e71e7215: Size # Size
     d242db6c-df95-4f02-8154-9e7770288fd9: Index2 # Index2
-    d4401c02-0ab2-48b2-8f90-b3fba660540d: Gallery # Gallery
-    d8287e76-204a-4eef-bf11-a78b04a597d1: 'Public Schema' # Public Schema
+    dcba346d-94eb-4b07-8539-1d6adeef0a46: 'Public Schema' # Public Schema
     e37f5a9b-c599-46f5-89e3-7a681189f376: Medium # Medium
     e8716a57-f632-4b58-8c90-fa5412e61e3b: 'Slider Image' # Slider Image
-    f70b07fc-6eb3-4b53-8e0c-31818172636d: 'Public Schema' # Public Schema
     f242565a-a345-41ba-a754-21e6101195d9: Type # Type
     ff5d000b-7f43-46bc-95c6-1eb882983681: 'Banner Text' # Banner Text
 plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
-  contact-form:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  cp-css:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
-    settings:
-      additionalCss: "ul#alerts li{\r\n    display: none !important;\r\n}"
-      cacheBusting: true
-      cssFile: ''
+    schemaVersion: 5.6.0.0
   expanded-singles:
     edition: standard
     enabled: true
@@ -359,15 +335,6 @@ plugins:
       lowerQualityRetinaImageVariants: true
       sharpenScaledImagePercentage: 50
       transformClass: nystudio107\imageoptimize\imagetransforms\CraftImageTransform
-  quick-filters:
-    edition: standard
-    enabled: false
-    licenseKey: CUZP99B0BYG5KMQ84738VR5P
-    schemaVersion: 1.0.0
-  retcon:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
@@ -385,7 +352,7 @@ plugins:
           __assoc__:
             -
               - policy
-              - '''self'''
+              - "'self'"
       devModeCpTitlePrefix: '&#x1f6a7;⚙ '
       devModeTitlePrefix: '&#x1f6a7; '
       displayAnalysisSidebar: true
@@ -427,7 +394,7 @@ system:
   live: true
   name: 'Celeste Hanlon'
   retryDuration: null
-  schemaVersion: 4.17.0.3
+  schemaVersion: 5.11.0.2
   timeZone: America/New_York
 users:
   allowPublicRegistration: false

@@ -1,7 +1,16 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: a5940ace-7123-46e0-9a70-cc841f70f3ff # Contact Celeste
 handle: contact
+maxAuthors: 1
+minAuthors: 1
 name: 'Contact Celeste'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon

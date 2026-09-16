@@ -1,7 +1,16 @@
 defaultPlacement: beginning
 enableVersioning: true
+entryTypes:
+  -
+    uid: 861fbacf-15bb-444c-a03e-ffe4c9b625a8 # Default
 handle: galleryItem
+maxAuthors: 1
+minAuthors: 1
 name: 'Gallery Item'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon

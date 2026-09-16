@@ -1,6 +1,5 @@
 columnSuffix: evmyhrle
 contentColumnType: text
-fieldGroup: 83eb1363-c131-402c-a350-114f719f978d # Common
 handle: bio
 instructions: null
 name: Bio
@@ -8,9 +7,22 @@ searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  ckeConfig: cb6b6826-6262-4cd3-a1a9-3142974ff8a7 # Simple
+  characterLimit: null
   columnType: text
+  css: null
+  cssFile: null
   defaultTransform: null
+  fullGraphqlData: false
+  headingLevels:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  js: null
+  jsFile: null
+  options: null
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
@@ -18,6 +30,12 @@ settings:
   showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - link
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

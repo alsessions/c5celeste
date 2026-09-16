@@ -31,7 +31,7 @@
       <div class="col-span-2 pt-4">
         <div class="text-gray-700 mb-1 ">{{ entry.postDate | date("M d, Y") }} </div>
         <h2>{{ entry.title }}</h2>
-        {{ entry.plainText | wordLimit(30) | typogrify }}
+        {{ (entry.plainText ?? '') | wordLimit(30) | typogrify }}
      
        <div class="not-prose my-10"><button><a href="{{ entry.url }}" class="btn-small">Continue Reading</a></button></div>
       </div>
