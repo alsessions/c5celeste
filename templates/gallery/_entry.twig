@@ -1,0 +1,99 @@
+{% extends "_partials/_layout.twig" %}
+
+{% block content %}
+    <div class=" max-w-6xl mx-auto min-h-screen pb-20">
+
+        <!-- Begin Pagination -->
+        <nav class="flex justify-between pb-12 pt-8 not-prose">
+            {% set category = entry.category.one() %}
+            {% set params = craft.entries.section('galleryItem').relatedTo(category).orderBy('title asc') %} 
+            
+     
+            
+            {% set prevEntry = entry.getPrev(params) %} 
+            {% set nextEntry = entry.getNext(params) %} 
+         
+             {% if prevEntry %}
+            <p>
+              <a href="{{ prevEntry.url }}" name="Last image" title="Last image" class="text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 010 1.06l-2.47 2.47H21a.75.75 0 010 1.5H4.81l2.47 2.47a.75.75 0 11-1.06 1.06l-3.75-3.75a.75.75 0 010-1.06l3.75-3.75a.75.75 0 011.06 0z" clip-rule="evenodd" />
+              </svg>
+              </a>
+                        </p>
+            {% endif %}
+            {% set category = entry.category.one() %}
+            <a href="{{ category.url }}#page-top" class="text-gray-600 uppercase font-light">All {{category.title}}</a>
+            {% if nextEntry %}
+            <p>
+              <a href="{{ nextEntry.url }}" name="Next image" title="Next image" class="text-gray-450"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" clip-rule="evenodd" />
+              </svg>
+              </a>
+            </p>
+            {% else %}
+            <p>&nbsp;</p>
+            {% endif %}
+          </nav>
+
+          <!-- End Pagination -->
+          
+    
+        
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div>
+        <h1 class="font-light text-lg md:text-2xl lg:text-3xl mb-4 md:mb-10 text-gray-600">{{ entry.title  | typogrify }}</h1>
+        <div class="flex justify-between   gap-x-4  ">
+            {% if entry.medium | length %}
+                <span class="text-gray-500 md:text-lg">{{ entry.medium }}</span>
+            {% endif %}
+            {% if entry.year | length %}
+                <span class="text-gray-500 md:text-lg">{{ entry.year }}</span>
+            {% endif %}
+        </div>
+        <div class="flex justify-between mb-2  gap-x-4 ">
+            {% if entry.size | length %}
+                <span class="text-gray-500  md:text-lg">{{ entry.size }}</span>
+            {% endif %}
+
+   
+           
+       
+            {% if entry.price | length %}
+                <span class="text-gray-600 uppercase ">{{ entry.price | money }}</span>
+            {% endif %}
+        </div>
+    </div>
+    <div class="not-prose mt-2">
+        
+        {% for image in entry.photo %}
+
+        <a href="{{ image.getUrl() }}" data-lightbox="{{ entry.title }}" data-title="<h2 class='text-xl my-2'>{{ entry.title}}</h2>">
+             
+          {% endfor %} 
+        {% set optimizedImages = entry.photo.one().galleryItem %}
+       
+        <picture>
+            <source data-srcset="{{ optimizedImages.srcsetWebP() }}" 
+                    data-sizes="100vw"
+                    type="image/webp" />
+            <img class="lazyload w-full h-full"
+                 src="{{ optimizedImages.placeholderImage() }}"
+                 data-srcset="{{ optimizedImages.srcset() }}"
+                 data-sizes="100vw" />
+         </picture>
+
+        </a>
+        <div class="inline-flex items-center text-sm  tracking-wider text-gray-800 max-w-7xl mx-auto font-light mt-2">
+        	
+            <svg class="w-4 h-4 inline fill-current mr-2" viewBox="0 0 470 363" xmlns="http://www.w3.org/2000/svg"><path d="M438.827 133.347l-80.213-88.149c-15.872-15.872-41.728-15.893-57.749.128-5.077 5.077-8.533 11.157-10.325 17.643-15.957-12.224-38.976-11.008-53.675 3.691a40.64 40.64 0 00-10.347 17.621c-15.957-12.181-38.976-10.987-53.653 3.712-4.971 4.971-8.384 10.901-10.24 17.216l-37.803-37.803c-15.872-15.872-41.728-15.893-57.749.128-15.893 15.872-15.893 41.728 0 57.621L212.31 270.392l-86.144 13.525c-23.275 3.328-40.832 23.552-40.832 47.083 0 17.643 14.357 32 32 32h201.152c31.339 0 60.8-12.203 82.965-34.368l33.557-33.557c22.144-22.123 34.325-51.563 34.325-82.859 0-29.227-10.837-57.237-30.506-78.869zm-18.902 146.645l-33.557 33.557c-18.133 18.133-42.24 28.117-67.883 28.117H117.333c-5.888 0-10.667-4.779-10.667-10.667 0-12.971 9.685-24.128 22.677-25.984l106.987-16.811c3.968-.619 7.232-3.413 8.491-7.232 1.237-3.797.235-8-2.603-10.837L82.155 110.072c-7.573-7.573-7.573-19.904.107-27.605a19.436 19.436 0 0113.739-5.675c4.971 0 9.941 1.899 13.739 5.696l106.731 106.731c4.16 4.16 10.923 4.16 15.083 0a10.716 10.716 0 003.115-7.552c0-2.731-1.045-5.461-3.136-7.552l-43.584-43.584c-7.573-7.573-7.573-19.883.128-27.584 7.552-7.552 19.904-7.552 27.456 0l43.605 43.605c4.16 4.16 10.923 4.16 15.083 0a10.716 10.716 0 003.115-7.552c0-2.731-1.045-5.461-3.136-7.552l-22.251-22.251c-7.573-7.573-7.573-19.883.128-27.584 7.552-7.552 19.904-7.552 27.456 0l22.357 22.357c.043.021.021.021.021.021l.021.021.021.021.021.021h.021c.021 0 .021.021.021.021 4.181 3.968 10.795 3.883 14.869-.213 4.16-4.16 4.16-10.923 0-15.083l-.917-.917a19.32 19.32 0 01-5.696-13.739c0-5.184 2.005-10.048 5.803-13.845 7.595-7.552 19.883-7.531 27.115-.363l79.872 87.787C439.125 165.389 448 188.301 448 212.216c0 25.6-9.963 49.664-28.075 67.776z"></path><path d="M183.381 56.931C167.851 22.563 133.547.333 96 .333c-52.928 0-96 43.072-96 96 0 37.547 22.229 71.851 56.597 87.403 1.429.64 2.923.939 4.395.939 4.053 0 7.936-2.347 9.728-6.272 2.411-5.376.021-11.691-5.333-14.123-26.752-12.096-44.053-38.763-44.053-67.947 0-41.173 33.493-74.667 74.667-74.667 29.184 0 55.851 17.301 67.947 44.053 2.411 5.376 8.747 7.787 14.101 5.333 5.375-2.431 7.764-8.745 5.332-14.121z"></path></svg>
+
+<span class="hidden md:inline mr-1 font-sans tracking-wider">Click</span><span class="md:hidden mr-1">Tap</span> to enlarge</span>
+        </div>
+      
+    </div>
+</div>
+
+    </div>
+    <script src="/js/lightbox/js/lightbox-plus-jquery.min.js"></script>
+{% endblock %}
+

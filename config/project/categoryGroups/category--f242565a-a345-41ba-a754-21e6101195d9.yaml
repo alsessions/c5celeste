@@ -1,0 +1,112 @@
+defaultPlacement: end
+fieldLayouts:
+  ff689e4d-c93e-4ed9-9f64-a730a8931be0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 418858a4-1bb7-4dbf-8ae7-bcccd881e924
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3988dbe6-9f79-448e-bad4-87e38fa9c092 # Plain Text
+            instructions: 'An optional description of the work displayed below.'
+            label: Description
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c81c6db-797d-412e-ae1a-dcbaf4c575b6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1dadf828-8f91-43ae-afa5-d49f8fe7f5cb # Category Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b22457da-9b53-4cc3-a1d9-f36c0bbd3327
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3e0c7107-546e-45c0-8bb9-2babd79cae70
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b9843c1c-1c9e-49e5-8a40-9592d9270aee # Banner Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 11f4350c-a39f-47cb-b7f0-328e92f88b9d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 59589df6-ee58-471a-b688-418c40448ebb # Link Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1469b059-3005-4f67-9bdf-8c262abc1aa1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ff5d000b-7f43-46bc-95c6-1eb882983681 # Banner Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87bdcdfd-4fee-44e9-b75b-dfbca6e4fff2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Banner
+        uid: dc686d4b-9076-4327-be77-9e343d55cb00
+        userCondition: null
+handle: category
+name: Type
+siteSettings:
+  68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon
+    hasUrls: true
+    template: _category.twig
+    uriFormat: 'category/{slug}'
+structure:
+  maxLevels: null
+  uid: 73008c43-edf8-44f1-9ad4-a4ec67069bc5

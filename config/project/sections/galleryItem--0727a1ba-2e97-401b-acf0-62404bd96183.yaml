@@ -1,0 +1,15 @@
+defaultPlacement: beginning
+enableVersioning: true
+handle: galleryItem
+name: 'Gallery Item'
+propagationMethod: all
+siteSettings:
+  68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon
+    enabledByDefault: true
+    hasUrls: true
+    template: gallery/_entry.twig
+    uriFormat: 'gallery/{slug}'
+structure:
+  maxLevels: null
+  uid: 2415a594-fae0-4ecc-9458-34e99c9fe0dc
+type: structure

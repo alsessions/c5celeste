@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: gallery
+name: 'Gallery Index'
+propagationMethod: all
+siteSettings:
+  68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon
+    enabledByDefault: true
+    hasUrls: true
+    template: gallery/index.twig
+    uriFormat: __home__
+type: single

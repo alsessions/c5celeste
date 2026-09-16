@@ -1,0 +1,19 @@
+columnSuffix: pmsbhspt
+contentColumnType: text
+fieldGroup: d4401c02-0ab2-48b2-8f90-b3fba660540d # Gallery
+handle: medium
+instructions: null
+name: Medium
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

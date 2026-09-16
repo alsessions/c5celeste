@@ -1,0 +1,67 @@
+fieldLayouts:
+  f4e99b08-9d7e-45d7-8d14-8f131b8a4968:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: cdc261ea-da23-4b27-bad3-b144fd841211
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3988dbe6-9f79-448e-bad4-87e38fa9c092 # Plain Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b24ef9b-aa22-4bf9-afda-e701e8cfd88a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0fec8553-9509-41e1-a7fb-e4dc3ade19ce # Photo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1dabd87b-1d0c-43d7-9d4e-79b813f4557c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 647fc20f-ac71-4c73-b5da-6127a7f47a22
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 58ff4b34-297a-4bc5-8578-808b82346497 # News
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,55 @@
+fieldLayouts:
+  7f90547d-0254-49f3-8abd-da3c2d7ab2ef:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6e2f442f-dbc3-4a79-b857-0e2edb843291
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3988dbe6-9f79-448e-bad4-87e38fa9c092 # Plain Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7e7e0181-954f-4055-86f1-1dc45a84da6a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 330447bc-f566-4c4e-9b8a-7076efb0182e
+        userCondition: null
+handle: contact
+hasTitleField: true
+name: 'Contact Celeste'
+section: 64861cfc-b63e-44c1-94d3-89b36e800555 # Contact Celeste
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

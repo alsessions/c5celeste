@@ -1,0 +1,247 @@
+@import 'tailwindcss';
+
+@source '../../templates';
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/forms';
+@config '../../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src:
+      local(''),
+      url('../fonts/roboto-v30-latin-300.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local(''),
+      url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local(''),
+      url('../fonts/roboto-v30-latin-italic.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src:
+      local(''),
+      url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+}
+
+/* roboto-regular - latin */
+
+/* roboto-italic - latin */
+
+/* roboto-500 - latin */
+
+@layer components {
+  div.gallery-row:nth-child(even) {
+    @apply bg-white;
+  }
+
+  div.gallery-row:nth-child(odd) {
+    @apply bg-blue-50;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .swiper {
+    @apply w-full h-96 md:h-128 lg:h-168;
+  }
+
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .responsive-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+
+    /* Image border */
+    border: 2px solid black !important;
+  }
+
+  .lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(../images/prev.png) left 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0.3 !important;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
+
+  .lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(../images/next.png) right 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0.3 !important;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
+
+  .lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: 300 !important;
+    line-height: 1em;
+  }
+
+  .btn-medium {
+    @apply px-5 py-2.5 tracking-wide uppercase bg-gray-100 hover:bg-gray-200 hover:text-gray-700 text-gray-500 rounded-sm text-sm;
+  }
+
+  .btn-medium-light {
+    @apply px-5 py-2.5 tracking-wide uppercase bg-gray-200 hover:bg-gray-100 hover:text-gray-700 text-gray-500 rounded-sm text-sm;
+  }
+
+  .btn-small {
+    @apply px-3 py-1 uppercase bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm;
+  }
+
+  /* Swiper follows */
+
+  .swiper {
+    width: 100%;
+  }
+
+  .swiper {
+    @apply md:h-[640px];
+  }
+
+  .swiper-text p {
+    @apply text-white text-lg md:text-xl leading-loose mt-4;
+  }
+
+  .swiper-text h3 {
+    @apply text-gray-100 text-lg md:text-2xl leading-loose mt-4 font-semibold;
+  }
+
+  @media (min-width: 768px) {
+    .swiper-text p {
+      font-size: 1.25rem;
+      line-height: 1.75 !important;
+    }
+  }
+
+  .swiper-text p a {
+    @apply no-underline text-blue-100 border-b-2 border-blue-200 hover:border-blue-300 hover:text-blue-300;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fff !important;
+    opacity: 0.9 !important;
+    @apply h-4 w-4;
+  }
+
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: blue !important;
+  }
+  .swiper-button-new-last,
+  .swiper-button-new-next {
+    @apply text-white font-semibold text-xl px-2 bg-gray-700/50 mb-6;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 100% !important;
+    width: calc(var(--swiper-navigation-size) / 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: bottom;
+    justify-content: center;
+    color: #fff !important;
+    background-color: transparent;
+    opacity: 0.9;
+    padding: 40px !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-family: inherit;
+    font-size: 16px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+    padding: 10px;
+  }
+
+  div.prose figure {
+    @apply mt-4!;
+    @apply mr-4!;
+    @apply mb-4!;
+    @apply shadow-md;
+  }
+}

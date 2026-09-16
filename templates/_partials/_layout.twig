@@ -1,0 +1,15 @@
+{% include '_partials/_head.twig' %}
+
+
+<body class= "mx-auto max-w-none">
+ 
+    {% include '_partials/_nav.twig' %}
+
+
+<div class="pt-20 mx-auto bg-white px-4 min-h-screen">
+    {% block content %}
+
+    {% endblock %}
+</div>
+    
+{% include '_partials/_footer.twig' %}

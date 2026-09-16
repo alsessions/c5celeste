@@ -1,0 +1,44 @@
+columnSuffix: hvfdztbs
+contentColumnType: text
+fieldGroup: 6b0c7eb4-cf99-49b5-ae30-d9c6bff0f3d1 # Optimized Images
+handle: galleryThumbnail
+instructions: null
+name: 'Gallery Thumbnail'
+searchable: false
+settings:
+  displayDominantColorPalette: true
+  displayLazyLoadPlaceholderImages: true
+  displayOptimizedImageVariants: true
+  fieldVolumeSettings:
+    __assoc__:
+      -
+        - galleryEntry
+        - '*'
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '576'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

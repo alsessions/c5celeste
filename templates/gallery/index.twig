@@ -1,0 +1,97 @@
+{% include '_partials/_head.twig' %}
+
+
+<body class= "mx-auto  w-full">
+  {% include '_partials/_banner.twig' %}
+    {% include '_partials/_nav.twig' %}
+
+
+<div class=" max-w-none mx-auto">
+
+
+
+
+<div class=" max-w-none py-24  bg-gray-200 "
+  style="background-image:linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),url('/photos/_576x570_crop_center-center_82_line/painting02.JPG.webp');
+          background-size:cover;"
+>
+
+
+<div class="grid md:grid-cols-2 md:gap-12  max-w-6xl mx-auto">
+  <div>
+  <img src="photos/_576x570_crop_center-center_82_line/painting02.JPG.webp" alt="Image of bottle painting" class="rounded-lg text-center p-6"></p>
+  </div>
+  <div class="p-6">
+    <p class="text-white text lg md:text-xl leading-loose mb-4">Originally from Greenwich Village, NYC -- I grew up around a vibrant diverse community where my mother owned a vintage clothing store for 40 years. </p>
+      
+      <p class="text-white text lg md:text-xl leading-loose mb-4">Being in that environment, influenced my aesthetic. I make images often nostalgic, brightly colored, using vintage fabric and juvenile in style. I am very interested in how things look from being decayed, aged and worn.</p>
+
+    <p class="text-white text lg md:text-xl leading-loose mb-4">I work in a variety of mediums: printmaking, sculpture, painting, sewing and drawing. I am constantly making images.</p>
+
+    <a href="/about"><button class="btn-medium  mt-10">Exhibitions &amp; Media</button></a>
+    </div>
+</div>
+</div>
+
+
+
+<main class="w-full">
+
+  <script>
+    AOS.init({
+      offset: 100,
+      delay: 50,
+      duration: 750,
+      easing: 'ease-in-out',
+      once: false,
+    });
+  </script>
+
+{% set entryIds = craft.entries.section('galleryItem').ids() %}
+{% set categories = craft.categories.relatedTo({ sourceElement: entryIds }).group('category') %}
+
+{% for category in categories %}
+<div class="w-full gallery-row">
+<div class="max-w-6xl mx-auto py-6 px-4" data-aos="fade-up">
+    <h2 class="text-3xl font-light my-4">{{ category.title }}</h2>
+    
+        {% set entries = craft.entries.section('galleryItem').relatedTo(category).limit(4) %}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+        {% for entry in entries %}
+       
+        <article>
+       
+            <h3 class="uppercase text-gray-700 my-1 tracking-wide line-clamp-1 "><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+            {% set optimizedImages = entry.photo.one().galleryThumbnail %}
+            <a href="{{ entry.url }}">
+            <picture>
+                <source srcset="{{ optimizedImages.srcsetWebP() }}" 
+                         sizes="100vw"
+                         type="image/webp" />
+                         <img class="lazyload w-full h-auto rounded-sm shadow-sm"
+                         src="{{ optimizedImages.placeholderImage() }}"
+                         data-srcset="{{ optimizedImages.srcset() }}"
+                         data-sizes="100vw" />
+             </picture>
+            </a>
+             <p class="text-cyan-800 my-1">{{ entry.year }}</p>
+          </article>
+        {% endfor %}
+        </div>
+       <div class="text-right"><a href="{{ category.url }}" class="ring-gray-100 ring-1 px-2 py-1 bg-gray-200 hover:bg-gray-300 uppercase rounded-sm"> All {{ category.title }}</a></div>
+    </div>
+</div>
+{% endfor %}
+
+
+ 
+   
+
+
+
+</main>
+    
+{% include '_partials/_footer.twig' %}

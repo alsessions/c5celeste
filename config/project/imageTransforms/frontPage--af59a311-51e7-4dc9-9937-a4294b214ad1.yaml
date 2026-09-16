@@ -1,0 +1,10 @@
+format: null
+handle: frontPage
+height: null
+interlace: none
+mode: crop
+name: 'Front Page'
+position: center-center
+quality: 82
+upscale: true
+width: 1024

@@ -1,0 +1,10 @@
+format: null
+handle: sliderImage
+height: 600
+interlace: none
+mode: crop
+name: 'Slider Image'
+position: center-center
+quality: 82
+upscale: true
+width: 1240

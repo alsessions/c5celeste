@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: index2
+name: Index2
+propagationMethod: all
+siteSettings:
+  68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon
+    enabledByDefault: true
+    hasUrls: true
+    template: index2.twig
+    uriFormat: index2
+type: single

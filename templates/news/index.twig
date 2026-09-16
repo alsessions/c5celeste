@@ -1,0 +1,44 @@
+{% extends "_partials/_layout.twig" %}
+
+{% block content %}
+
+
+
+
+<div class="prose  max-w-6xl prose-h2:mt-0 mx-auto">
+<h2>News &amp; Events</h2>
+    {# Create an entry query with the 'section' and 'limit' parameters #}
+    {% set newsItem = craft.entries()
+      .section('news')
+      .limit(10) %}
+    
+    {# Fetch the entries #}
+    {% set entries = newsItem.all() %}
+    
+    {# Display the entries #}
+    {% for entry in entries %}
+      <article class="mb-20 md:grid grid-cols-3 gap-12">
+        <div class="col-span-1">
+        {% if entry.photo | length %}
+        {% for image in entry.photo %}
+         <img src="{{ image.url('wide') }}" alt="{{ image.title }}"
+         class="rounded-sm w-full h-full">                               
+      {% endfor %}
+      {% endif %}
+        </div>
+
+     
+      <div class="col-span-2 pt-4">
+        <div class="text-gray-700 mb-1 ">{{ entry.postDate | date("M d, Y") }} </div>
+        <h2>{{ entry.title }}</h2>
+        {{ entry.plainText | wordLimit(30) | typogrify }}
+     
+       <div class="not-prose my-10"><button><a href="{{ entry.url }}" class="btn-small">Continue Reading</a></button></div>
+      </div>
+      
+      </article>
+    {% endfor %}
+     
+
+</div>
+{% endblock %}

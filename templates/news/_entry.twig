@@ -1,0 +1,39 @@
+{% extends "_partials/_layout.twig" %}
+
+{% block content %}
+<div class="prose prose-lg  max-w-6xl prose-h2:mt-0 mx-auto md:grid grid-cols-3 gap-20 pb-40">
+  <div class="text-gray-500 mb-1 col-span-2 ">{{ entry.postDate | date("M d, Y") }}
+  <h2>{{ entry.title }}</h2>
+  {% if entry.photo | length %}
+  {% for image in entry.photo %}
+     <img src="{{ image.url }}" alt="{{ image.title }}">                               
+{% endfor %}
+{% endif %}
+
+  {{ entry.plainText | markdown | typogrify }}
+</div>   
+
+<div>
+  <h3>Other Entries</h3>
+  {# Create an entry query with the 'section' and 'limit' parameters #}
+    {% set newsItem = craft.entries()
+      .section('news')
+      .limit(10)
+      .id('not ' ~ entry.id) %}
+    
+    {# Fetch the entries #}
+    {% set entries = newsItem.all() %}
+    
+    {# Display the entries #}
+    {% for entry in entries %}
+    <article class="mb-6 not-prose">
+      <span class="text-gray-500 text-base">{{ entry.postDate | date("M d, Y") }}<span>
+      <p class="text-lg"><a href="{{ entry.url }}" class="text-blue-400 hover:text-blue-800 hover:underline">{{ entry.title }}</a></p>
+    </article>
+    {% endfor %}
+</div>
+
+</div>
+
+{% endblock %}
+

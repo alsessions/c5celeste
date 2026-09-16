@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: privacyPolicy
+name: 'Privacy  Policy'
+propagationMethod: all
+siteSettings:
+  68041276-7b3d-498b-9a92-f36db2dfe659: # Celeste Hanlon
+    enabledByDefault: true
+    hasUrls: true
+    template: _privacy.twig
+    uriFormat: privacy
+type: single

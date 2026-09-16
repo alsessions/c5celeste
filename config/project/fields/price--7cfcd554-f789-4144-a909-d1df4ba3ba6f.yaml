@@ -1,0 +1,17 @@
+columnSuffix: qzgnguhs
+contentColumnType: integer(7)
+fieldGroup: d4401c02-0ab2-48b2-8f90-b3fba660540d # Gallery
+handle: price
+instructions: null
+name: Price
+searchable: false
+settings:
+  currency: USD
+  defaultValue: null
+  max: 1000000
+  min: 0
+  showCurrency: true
+  size: 7
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Money

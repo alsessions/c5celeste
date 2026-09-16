@@ -1,0 +1,125 @@
+{% include '_partials/_head.twig' %}
+
+<body class="mx-auto max-w-none">
+  {% include '_partials/_banner.twig' %}
+    {% include '_partials/_nav.twig' %}
+    <div class="prose sm:prose-sm md:prose-lg max-w-6xl py-10 mx-auto  px-4 prose-headings:text-gray-500">
+        <h1>{{ category.title }}</h1>
+
+    </div>
+    <div class="md:pb-20 mx-auto w-full bg-white/70 min-h-screen ">
+        {% block content %}
+
+            {# Fetch all entries related to this category #}
+            {% set entries = craft.entries()
+  .relatedTo(category)
+  .all() %}
+<!--
+            <div
+                class="swiper  md:mb-10">
+            
+                <div
+                    class="swiper-wrapper">
+                
+                    {% for entry in entries %}
+                        {% set optimizedImages = entry.photo.one().galleryItem %}
+                        <div class="swiper-slide" >  <a href="{{ entry.url }}"><img src="{{ optimizedImages.srcWebp() }}" class="w-full"></a>
+                                     
+                            <div class="absolute bottom-0 bg-white/80 md:px-4 py-1 w-full">
+                                <h1 class="text-gray-700 text-lg tracking-wider max-w-6xl mx-auto px-4 uppercase">
+                                    <a href="{{ entry.url }}">{{ entry.title }}</a>
+                                </h1>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+
+            </div>
+
+    <script>
+        var swiper = new Swiper(".swiper", {
+          spaceBetween: 0,
+          centeredSlides: true,
+          loop: true,
+          autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>-
+    -->
+            {% if category.plainText | length %}
+            <div class="max-w-6xl mx-auto mt-10 px-4 prose">
+
+              <div class="grid md:grid-cols-2 md:gap-10">
+                <div>
+              {# Category description field #}
+                {{ category.plainText | markdown }}
+            </div>
+            <div>
+
+              {% for image in category.categoryImage %}
+              <a href="{{ image.getUrl() }}">
+                <img alt="{{ image.title }}" src="{{ image.getUrl() }}" class="rounded-sm"  />
+              </a>
+      
+          {% endfor %}
+      
+            </div>
+
+          </div>
+            </div>
+          {% endif %}
+
+            {# Fetch all entries related to this category #}
+            {% set entries = craft.entries()
+      .relatedTo(category)
+      .orderBy('postDate DESC')
+      .all() %}
+<a id="page-top"></a>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-12 my-20 px-4 max-w-6xl mx-auto">
+
+                {% for entry in entries %}
+                    <article>
+                        <p class="uppercase text-sm md:text-lg text-gray-500 mb-2 truncate tracking-wider ">
+                            <a href="{{ entry.url }}">{{ entry.title }}</a>
+                        </p>
+
+                        {% set optimizedImages = entry.photo.one().galleryThumbnail %}
+                        <a href="{{ entry.url }}">
+                            <picture>
+                                <source data-srcset="{{ optimizedImages.srcsetWebP() }}" data-sizes="100vw" type="image/webp"/>
+
+                                <img class="lazyload w-full h-auto hover:opacity-90 duration-300 rounded-xs " src="{{ optimizedImages.placeholderImage() }}" data-srcset="{{ optimizedImages.srcset() }}" data-sizes="100vw" alt="Image of artwork" />
+
+                            </picture>
+
+                        </a>
+
+                        <div class="flex justify-between mt-2 px-1 gap-4">
+
+                            {% if entry.year | length %}
+                                <p class="text-gray-600 uppercase text-sm">{{ entry.year }}</p>
+                            {% endif %}
+                        </div>
+                    </article>
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    {% endblock %}
+    <script src="/js/lightbox/js/lightbox-plus-jquery.min.js"></script>
+  
+    {% include '_partials/_footer.twig' %}
+</body>

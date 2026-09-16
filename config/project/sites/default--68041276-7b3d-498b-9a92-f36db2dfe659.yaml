@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Celeste Hanlon'
+primary: true
+siteGroup: 15ddaabb-0b3b-4e37-87f7-afd53a992ae5 # Celeste Hanlon
+sortOrder: 1

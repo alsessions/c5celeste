@@ -1,0 +1,24 @@
+columnSuffix: evmyhrle
+contentColumnType: text
+fieldGroup: 83eb1363-c131-402c-a350-114f719f978d # Common
+handle: bio
+instructions: null
+name: Bio
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: cb6b6826-6262-4cd3-a1a9-3142974ff8a7 # Simple
+  columnType: text
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

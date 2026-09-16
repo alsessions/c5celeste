@@ -1,0 +1,85 @@
+fieldLayouts:
+  572e79ae-4f16-49b0-9d5c-1e6db88fd240:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f54afd35-10ad-4e76-b46f-786f265c836e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3988dbe6-9f79-448e-bad4-87e38fa9c092 # Plain Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f640cda5-942b-46e4-80a2-f4f30e357220
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 56321a63-8355-4acc-82f4-9f194c3b2c54
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b9843c1c-1c9e-49e5-8a40-9592d9270aee # Banner Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7bd261ed-a28c-46c1-b8ce-787df051cedc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ff5d000b-7f43-46bc-95c6-1eb882983681 # Banner Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 73e0b7d8-ac34-4a0a-bf01-b9f834f84cf3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Banner
+        uid: 27783fa3-7518-4d17-8854-d65739ca266c
+        userCondition: null
+handle: gallery
+hasTitleField: true
+name: 'Gallery Index'
+section: 18072655-b712-4cc9-adec-60d41d875047 # Gallery Index
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

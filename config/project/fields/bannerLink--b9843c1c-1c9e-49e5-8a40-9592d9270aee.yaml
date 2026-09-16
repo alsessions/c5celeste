@@ -1,0 +1,19 @@
+columnSuffix: bokedbej
+contentColumnType: text
+fieldGroup: 83eb1363-c131-402c-a350-114f719f978d # Common
+handle: bannerLink
+instructions: 'A fully qualified URL.'
+name: 'Banner Link'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

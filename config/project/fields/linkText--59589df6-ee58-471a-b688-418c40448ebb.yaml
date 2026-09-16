@@ -1,0 +1,19 @@
+columnSuffix: wcaxgaxc
+contentColumnType: text
+fieldGroup: b1bfef9e-b5d9-4697-a3b0-c699055ac415 # Category
+handle: linkText
+instructions: 'Keep it short.'
+name: 'Link Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
